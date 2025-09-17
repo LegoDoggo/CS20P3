@@ -39,6 +39,8 @@ public class Election {
 		
 		//Display final results and calculate percentages
 		NumberFormat percent = NumberFormat.getPercentInstance();
+		percent.setMinimumFractionDigits(1);
+		percent.setMaximumFractionDigits(2);
 		System.out.format("%-15s %8s %10s %n", "Candidate", "Votes", "Percentage");
 		System.out.format("%-15s %8s %10s %n", "John", johnTotal, percent.format((double)johnTotal / totalVotes));
 		System.out.format("%-15s %8s %10s %n", "Carrie", carrieTotal, percent.format((double)carrieTotal / totalVotes));
