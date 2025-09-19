@@ -1,5 +1,6 @@
 package skillBuilders;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class RandomNum {
 
@@ -14,8 +15,11 @@ public class RandomNum {
 		System.out.print("MINIMUM value for generation: ");
 		int minVal = input.nextInt();
 		System.out.print("MAXIMUM value for generation: ");
+		int maxVal = input.nextInt();
 		
-
+		//Generate and display random number
+		int randomInteger = (int)(Math.random() * (maxVal - minVal + 1) + minVal);
+		System.out.print("Your random number is: " + randomInteger);
 	}
 
 }
