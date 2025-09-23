@@ -7,8 +7,9 @@ public class MathTutor {
 	{
 		//Introduce user
 		System.out.println("Math Tutor");
+		System.out.println("All answers in this program are rounded to the nearest integer.");
 		System.out.println("");
-		int answer = 0;
+		double answer = 0;
 		String operatorDisplay = "";
 		
 		//Generate random numbers/operators
@@ -37,7 +38,7 @@ public class MathTutor {
 			break;
 			
 		case 4:
-			answer = randomInteger1 / randomInteger2;
+			answer = (double) randomInteger1 / randomInteger2;
 			operatorDisplay = "/";
 			break;
 		
@@ -48,20 +49,30 @@ public class MathTutor {
 		Scanner input = new Scanner(System.in);
 		System.out.println("");
 		System.out.print("Answer: ");
-		double userAns = input.nextInt();
+		int userAns = input.nextInt();
 		System.out.println("");
 		
-		//Determine whether answer is right or wrong
-		if (userAns == answer)
-		{
-			System.out.println("Correct!");
-		}
+        //Round answer manually
+        int roundedAnswer;
+        if (answer >= 0)
+            roundedAnswer = (int)(answer + 0.5);
+        else
+            roundedAnswer = (int)(answer - 0.5);
 		
-		else
-		{
-			System.out.println("Incorrect! The answer is " + answer);
-		}
+		//Determine whether answer is right or wrong
+        if (userAns == roundedAnswer)
+        {
+            System.out.println("Correct!");
+        } 
+        else 
+        {
+            if (answer == (int)answer) // whole number
+                System.out.println("Incorrect! The answer is " + (int)answer);
+            else
+                System.out.println("Incorrect! The answer is " + answer);
+
+        }
 
 	}
-
+	
 }
