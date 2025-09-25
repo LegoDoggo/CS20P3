@@ -19,7 +19,7 @@ public class MathTutor {
 		
 		
 		//Determine answer and operator to display
-		switch(randomOperator)
+		switch (randomOperator)
 		{
 		
 		case 1:
@@ -69,7 +69,7 @@ public class MathTutor {
             if (answer == (int)answer) // whole number
                 System.out.println("Incorrect! The answer is " + (int)answer);
             else
-                System.out.println("Incorrect! The answer is " + answer);
+                System.out.println("Incorrect! The answer is " + (int)answer);
 
         }
 
