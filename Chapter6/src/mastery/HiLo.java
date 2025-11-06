@@ -1,0 +1,244 @@
+/*
+
+Program: HiLo.java          Last Date of this Revision: November 3rd, 2025
+
+Purpose: A program that allows the user to play a chance-based game called Hi-Lo.
+
+Author: Easton Seeley
+School: CHHS
+Course: Computer Science 20
+ 
+*/
+
+package mastery;
+import java.util.Scanner;
+
+public class HiLo {
+	
+	//Method where player can risk points
+	public static int riskPoints(int userPoints)
+	{
+		//Initialize variables
+		boolean canUserContinue = false;
+		int pointsToRisk = 0;
+		
+		//Loop to fix invalid point entries
+		while (canUserContinue == false)
+		{
+			//Risk points
+			Scanner input = new Scanner(System.in);
+			System.out.println("");
+			System.out.print("Enter points to risk: ");
+			pointsToRisk = input.nextInt();
+			System.out.println("");
+			
+			//If user enters an invalid amount of points, try again
+			if (pointsToRisk > userPoints)
+			{
+				System.out.println("You do not have enough points to risk! Try again.");
+			}
+			
+			else if (pointsToRisk <= 0)
+			{
+				System.out.println("That is not a valid number! Try again.");
+			}
+			
+			else
+			{
+				canUserContinue = true;
+			}
+		}
+		
+		return pointsToRisk;
+	}
+	
+	//Method where player can guess high/low
+	public static int guess()
+	{
+		//Initialize variables
+		int playerGuess = 0;
+		boolean canUserContinue = false;
+		
+		//Loop to fix invalid point entries
+		while (canUserContinue == false) 
+		{
+			Scanner input = new Scanner(System.in);
+			System.out.print("Predict 1=High 0=Low: ");
+			playerGuess = input.nextInt();
+			
+			//If user enters an invalid guess, try again
+			if (playerGuess > 1)
+			{
+				System.out.println("That is not a valid guess! Try again.");
+			}
+			
+			else if (playerGuess < 0)
+			{
+				System.out.println("That is not a valid guess! Try again.");
+			}
+			
+			else
+			{
+				canUserContinue = true;
+			}
+		}
+		
+		return playerGuess;
+	}
+	
+	public static void gameOver()
+	{
+		
+	}
+	
+	//Generate a random number between 1 and 13
+	public static double generateRandNum()
+	{
+		double randomNum = (13 - 1 + 1) * Math.random() + 1; 
+		return randomNum;
+	}
+
+	//Check if guess is correct
+	public static boolean isGuessCorrect(int guessNum, int computerNumber)
+	{
+		//Initialize variables
+		boolean didUserWin;
+		int hiOrLo = 0;
+		
+		//Converted the generated number into something that can be compared to the guess (1 or 0)
+		if (computerNumber < 7)
+		{
+			//Set number to low
+			hiOrLo = 0;
+		}
+		
+		else if (computerNumber > 7)
+		{
+			//Set number to high
+			hiOrLo = 1;
+		}
+		
+		
+		//Check if guess is equal to generated number (win/lose)
+		if (guessNum == hiOrLo)
+		{
+			didUserWin = true;
+		}
+		
+		else if (computerNumber == 7)
+		{
+			didUserWin = false;
+		}
+		
+		else
+		{
+			didUserWin = false;
+		}
+		
+		return didUserWin;
+	}
+	
+	public static void pointsAmount(int userPoints, int pointsRisked)
+	{
+		
+	}
+	
+	public static void playAgain(int guessNum, int computerNumber, int userPoints, int pointsRisked)
+	{
+		//Display whether user has won or lost
+		boolean hasUserWon = isGuessCorrect(guessNum, computerNumber);
+		
+		if (hasUserWon == true)
+		{
+			System.out.println("You win! :)");
+		}
+		
+		else
+		{
+			System.out.println("You lose. :(");
+		}
+		
+		//Ask user if they want to play again
+		System.out.print("Play again? (y/n): ");
+		String playAgain = input.nextLine();
+		playAgain = playAgain.toLowerCase();
+		
+		//While loop to make sure valid input is recorded
+		while (isInputValid == false) 
+		{
+			if (playAgain.equals("y"))
+			{
+				//Update points
+				pointsAmount(userPoints, pointsRisked);
+			}
+			
+			else if (playAgain.equals("n"))
+			{
+				//Update points
+				pointsAmount(userPoints, pointsRisked);
+				gameOver();
+			}
+			
+			else
+			{
+				System.out.println("That is not a valid input! Try again.");
+			}
+		}
+	
+	}
+	
+	public static void main(String[] args) 
+	{
+		//Initialize variables
+		int userPoints = 1000;
+		int playerGuess = 0;
+		boolean isInputValid = false;
+		Scanner input = new Scanner(System.in);
+		
+		//Loop until user runs out of points
+		while (userPoints > 0)
+		{
+			//Introduce game
+			System.out.println("High-Low Game");
+			System.out.println("");
+			System.out.println("Numbers 1 to 6 (inclusive) are low.");
+			System.out.println("Numbers 8 to 13 (inclusive) are high.");
+			System.out.println("The number 7 is an automatic loss.");
+			System.out.println("You have " + userPoints + " points.");
+			
+			//Get values from methods that you can use to determine win/loss
+			int pointsRisked = riskPoints(userPoints);
+			int guessNum = guess();
+			int computerNumber = (int) generateRandNum();
+			
+			//Display what the number is
+			System.out.println("Number is " + computerNumber);
+			
+			//Display whether user has won or lost
+			boolean hasUserWon = isGuessCorrect(guessNum, computerNumber);
+			
+			if (hasUserWon == true)
+			{
+				System.out.println("You win! :)");
+			}
+			
+			else
+			{
+				System.out.println("You lose. :(");
+			}
+			
+			playAgain(int guessNum, int computerNumber, int userPoints, int pointsRisked)
+		}
+		
+		//Points now have been depleted; end the game
+		gameOver();
+		
+	}
+
+}
+
+/* Screen Dump
+
+Paste the output of your code here
+ 
+ */
