@@ -138,25 +138,26 @@ public class HiLo {
 		return didUserWin;
 	}
 	
-	public static void pointsAmount(int userPoints, int pointsRisked)
+	//Determine how many points the user should have
+	public static int pointsAmount(int userPoints, int pointsRisked, boolean hasUserWon)
 	{
-		
-	}
-	
-	public static void playAgain(int guessNum, int computerNumber, int userPoints, int pointsRisked)
-	{
-		//Display whether user has won or lost
-		boolean hasUserWon = isGuessCorrect(guessNum, computerNumber);
+		userPoints =- pointsRisked;
 		
 		if (hasUserWon == true)
 		{
-			System.out.println("You win! :)");
+			userPoints =+ (pointsRisked * 2);
 		}
 		
-		else
-		{
-			System.out.println("You lose. :(");
-		}
+		return userPoints;
+	}
+	
+	//Determine if user wants to play again
+	public static boolean playAgain()
+	{
+		//Initialize variables
+		boolean isInputValid = false;
+		boolean restart = false;
+		Scanner input = new Scanner(System.in);
 		
 		//Ask user if they want to play again
 		System.out.print("Play again? (y/n): ");
@@ -168,15 +169,14 @@ public class HiLo {
 		{
 			if (playAgain.equals("y"))
 			{
-				//Update points
-				pointsAmount(userPoints, pointsRisked);
+				restart = true;
+				isInputValid = true;
 			}
 			
 			else if (playAgain.equals("n"))
 			{
-				//Update points
-				pointsAmount(userPoints, pointsRisked);
-				gameOver();
+				restart = false;
+				isInputValid = true;
 			}
 			
 			else
@@ -184,6 +184,9 @@ public class HiLo {
 				System.out.println("That is not a valid input! Try again.");
 			}
 		}
+		
+		//This will return whether to continue the game or not
+		return restart;
 	
 	}
 	
@@ -192,8 +195,6 @@ public class HiLo {
 		//Initialize variables
 		int userPoints = 1000;
 		int playerGuess = 0;
-		boolean isInputValid = false;
-		Scanner input = new Scanner(System.in);
 		
 		//Loop until user runs out of points
 		while (userPoints > 0)
@@ -227,7 +228,19 @@ public class HiLo {
 				System.out.println("You lose. :(");
 			}
 			
-			playAgain(int guessNum, int computerNumber, int userPoints, int pointsRisked)
+			//Determine if user wants to play again
+			boolean keepGoing = playAgain();
+			
+			if (keepGoing == true)
+			{
+				userPoints = pointsAmount(userPoints, pointsRisked, hasUserWon);
+			}
+			
+			else 
+			{
+				userPoints = pointsAmount(userPoints, pointsRisked, hasUserWon);
+				gameOver();
+			}
 		}
 		
 		//Points now have been depleted; end the game
