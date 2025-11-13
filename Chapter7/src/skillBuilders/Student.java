@@ -9,8 +9,8 @@ public class Student
 	
 	public Student()//Constructor method
 	{
-		firstName = " ";
-		lastName = " ";
+		firstName = "";
+		lastName = "";
 		address = "####";
 		stuID = 000000;
 	}
@@ -22,5 +22,53 @@ public class Student
 		address = "a";
 		stuID = id;
 	}
+	
+	//Accessor methods
+	
+	//Get around the private variable
+	public String getFirstName()
+	{
+		return firstName;
+	}
+	
+	//Get around the private variable
+	public String getLastName()
+	{
+		return lastName;
+	}
+	
+	//Get around the private variable
+	public String getAddress()
+	{
+		return address;
+	}
+	
+	//Get around the private variable
+	public int getStuID()
+	{
+		return stuID;
+	}
+	
+	//Modifier methods
+	public void setFirstName(String f)
+	{
+		firstName = f;
+	}
+	
+	public void setLastName(String l)
+	{
+		lastName = l;
+	}
+	
+	public void setAddress(String a)
+	{
+		address = a;
+	}
+	
+	public void setStuID(int s)
+	{
+		stuID = s;
+	}
+	
 	
 }

@@ -86,9 +86,15 @@ public class HiLo {
 		return playerGuess;
 	}
 	
-	public static void gameOver()
+	//Method runs when game ends
+	public static void gameOver(int playerGuess)
 	{
+		//Game over message
+		System.out.println("");
+		System.out.println("GAME OVER");
 		
+		//Display number of guesses
+		System.out.println("You took " + playerGuess + " guess(es) before the game ended.");
 	}
 	
 	//Generate a random number between 1 and 13
@@ -141,11 +147,11 @@ public class HiLo {
 	//Determine how many points the user should have
 	public static int pointsAmount(int userPoints, int pointsRisked, boolean hasUserWon)
 	{
-		userPoints =- pointsRisked;
+		userPoints -= pointsRisked;
 		
 		if (hasUserWon == true)
 		{
-			userPoints =+ (pointsRisked * 2);
+			userPoints += (pointsRisked * 2);
 		}
 		
 		return userPoints;
@@ -158,15 +164,16 @@ public class HiLo {
 		boolean isInputValid = false;
 		boolean restart = false;
 		Scanner input = new Scanner(System.in);
-		
-		//Ask user if they want to play again
-		System.out.print("Play again? (y/n): ");
-		String playAgain = input.nextLine();
-		playAgain = playAgain.toLowerCase();
+		String playAgain;
 		
 		//While loop to make sure valid input is recorded
 		while (isInputValid == false) 
 		{
+			//Ask user if they want to play again
+			System.out.print("Play again? (y/n): ");
+			playAgain = input.nextLine();
+			playAgain = playAgain.toLowerCase();
+			
 			if (playAgain.equals("y"))
 			{
 				restart = true;
@@ -218,33 +225,39 @@ public class HiLo {
 			//Display whether user has won or lost
 			boolean hasUserWon = isGuessCorrect(guessNum, computerNumber);
 			
-			if (hasUserWon == true)
+			if (hasUserWon == true && userPoints > 0)
 			{
 				System.out.println("You win! :)");
 			}
 			
-			else
+			else if (hasUserWon == false && userPoints > 0)
 			{
 				System.out.println("You lose. :(");
 			}
 			
-			//Determine if user wants to play again
-			boolean keepGoing = playAgain();
+			//Update number of guesses
+			playerGuess++;
 			
-			if (keepGoing == true)
+			//Update points
+			userPoints = pointsAmount(userPoints, pointsRisked, hasUserWon);
+			
+			//Break if user is out of points
+			if (userPoints <= 0)
 			{
-				userPoints = pointsAmount(userPoints, pointsRisked, hasUserWon);
+				break;
 			}
 			
-			else 
+			//Determine whether to keep going
+			boolean keepGoing = playAgain();
+
+			if (keepGoing == false) 
 			{
-				userPoints = pointsAmount(userPoints, pointsRisked, hasUserWon);
-				gameOver();
+			    break;
 			}
 		}
 		
 		//Points now have been depleted; end the game
-		gameOver();
+		gameOver(playerGuess);
 		
 	}
 
