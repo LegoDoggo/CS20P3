@@ -112,28 +112,27 @@ public class HiLo {
 		int hiOrLo = 0;
 		
 		//Converted the generated number into something that can be compared to the guess (1 or 0)
-		if (computerNumber < 7)
-		{
-			//Set number to low
-			hiOrLo = 0;
-		}
-		
-		else if (computerNumber > 7)
+		if (computerNumber > 7)
 		{
 			//Set number to high
 			hiOrLo = 1;
 		}
 		
-		
-		//Check if guess is equal to generated number (win/lose)
-		if (guessNum == hiOrLo)
+		else if (computerNumber < 7)
 		{
-			didUserWin = true;
+			//Set number to low
+			hiOrLo = 0;
 		}
-		
-		else if (computerNumber == 7)
+	
+		//Check if guess is equal to generated number (win/lose)
+		if (computerNumber == 7)
 		{
 			didUserWin = false;
+		}
+		
+		else if (guessNum == hiOrLo)
+		{
+			didUserWin = true;
 		}
 		
 		else
