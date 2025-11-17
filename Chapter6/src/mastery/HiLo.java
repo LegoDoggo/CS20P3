@@ -264,6 +264,33 @@ public class HiLo {
 
 /* Screen Dump
 
-Paste the output of your code here
+High-Low Game
+
+Numbers 1 to 6 (inclusive) are low.
+Numbers 8 to 13 (inclusive) are high.
+The number 7 is an automatic loss.
+You have 1000 points.
+
+Enter points to risk: 200
+
+Predict 1=High 0=Low: 1
+Number is 6
+You lose. :(
+Play again? (y/n): y
+High-Low Game
+
+Numbers 1 to 6 (inclusive) are low.
+Numbers 8 to 13 (inclusive) are high.
+The number 7 is an automatic loss.
+You have 800 points.
+
+Enter points to risk: 800
+
+Predict 1=High 0=Low: 0
+Number is 12
+You lose. :(
+
+GAME OVER
+You took 2 guess(es) before the game ended.
  
  */
