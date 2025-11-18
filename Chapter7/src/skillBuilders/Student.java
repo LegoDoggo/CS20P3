@@ -9,17 +9,17 @@ public class Student
 	
 	public Student()//Constructor method
 	{
-		firstName = "";
-		lastName = "";
+		firstName = "Unknown";
+		lastName = "Unknown";
 		address = "####";
 		stuID = 000000;
 	}
 	
 	public Student(String f, String l, String a, int id)//Overload Constructor
 	{
-		firstName = "f";
-		lastName = "l";
-		address = "a";
+		firstName = f;
+		lastName = l;
+		address = a;
 		stuID = id;
 	}
 	
@@ -68,6 +68,15 @@ public class Student
 	public void setStuID(int s)
 	{
 		stuID = s;
+	}
+	
+	public String toString()
+	{
+		return ("First name: " + firstName + 
+		"Last name: " + lastName +
+		"Address: " + address +
+		"Student ID: " + stuID);
+		
 	}
 	
 	
