@@ -1,36 +1,46 @@
 package skillBuilders;
 
-public class Circle {
-
-	private int radius;
-	private double PI = 3.14159265358
+public class Circle 
+{
+	private static final double PI = 3.14;
+	private double radius;
 	
 	public Circle()
 	{
-		radius = 1
-		
+		radius = 1;
 	}
 	
-	public int getRadius()
+	public Circle (double r)
+	{
+		radius = r;
+	}
+	
+	public double getRadius()
 	{
 		return radius;
 	}
 	
-	public void setRadius(int newRadius)
+	public void setRadius(double r)
 	{
-		radius = newRadius;
+		radius = r;
 	}
 	
-	public void setCircumfrence(int newCircumfrence)
+	public double Area()
 	{
-		circumfrence = 2*PI*getRadius(); 
+		double circleArea;
+		
+		circleArea = PI * radius * radius;
+		
+		return circleArea;
 	}
 	
-	public int circumference()
+	public double circumference()
 	{
-		return circumference;
+		double c;
+		
+		c = 2 * PI * radius;
+		
+		return c;
 	}
-
-
 
 }
