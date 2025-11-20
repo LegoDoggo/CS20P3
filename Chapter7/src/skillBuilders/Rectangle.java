@@ -49,5 +49,23 @@ public class Rectangle
 		return rectPer;
 	}
 	
+	public static void displayAreaFormula() 
+	{
+		System.out.println("The formula for the area of a rectangle is a=w*l");
+	}
+	
+	public boolean equals()
+	{
+		
+	}
+	
+	public String toString() 
+	{
+		 String rectangleString;
+		 rectangleString = "Rectangle has width " + width + " and length " + length;
+		 return(rectangleString);
+	}
+	
+	
 	
 }

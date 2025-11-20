@@ -25,7 +25,7 @@ public class Circle
 		radius = r;
 	}
 	
-	public double Area()
+	public double area()
 	{
 		double circleArea;
 		
@@ -42,5 +42,33 @@ public class Circle
 		
 		return c;
 	}
+	
+	public static void displayAreaFormula() 
+	{
+		System.out.println("The formula for the area of a circle is a=Pi*r*r");
+	}
+	
+	public boolean equals(Object c)
+	{
+		Circle testObj = (Circle)c;
+		
+		if (testObj.getRadius() == radius)
+		{
+			return(true);
+		}
+		
+		else
+		{
+			return(false);
+		}
+	}
+	
+	public String toString() 
+	{
+		 String circleString;
+		 circleString = "Circle has radius " + radius;
+		 return(circleString);
+	}
+
 
 }
