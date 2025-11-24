@@ -54,9 +54,19 @@ public class Rectangle
 		System.out.println("The formula for the area of a rectangle is a=w*l");
 	}
 	
-	public boolean equals()
+	public boolean equals(Object r)
 	{
+		Rectangle rectObj = (Rectangle)r;
 		
+	    if (width == rectObj.getWidth() && length == rectObj.getLength())
+	    {
+	        return true;
+	    }
+	    
+	    else
+	    {
+	        return false;
+	    }
 	}
 	
 	public String toString() 
