@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram name="Page-1" id="2-sVFYy9IAlTs9aR81BT">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="r9_iCsP1x4DMAz_-sQ4B-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PiggyBank.java" vertex="1">
+          <mxGeometry height="250" width="230" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r9_iCsP1x4DMAz_-sQ4B-2" parent="r9_iCsP1x4DMAz_-sQ4B-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ moneyTotal: double&lt;div&gt;+ penniesWorth: double&lt;/div&gt;&lt;div&gt;+ nickelsWorth: double&lt;/div&gt;&lt;div&gt;+ dimesWorth: double&lt;/div&gt;&lt;div&gt;+ quartersWorth: double&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="84" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r9_iCsP1x4DMAz_-sQ4B-3" parent="r9_iCsP1x4DMAz_-sQ4B-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r9_iCsP1x4DMAz_-sQ4B-4" parent="r9_iCsP1x4DMAz_-sQ4B-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ PiggyBank():&lt;div&gt;+ public double getMoney():&lt;/div&gt;&lt;div&gt;+ public void setMoney(double m):&lt;/div&gt;&lt;div&gt;+ public double addMoney(int choice):&lt;/div&gt;&lt;div&gt;+ public double takeMoney(int choice):&lt;/div&gt;&lt;div&gt;+ public double showMoney():&lt;/div&gt;&lt;div&gt;+ public String toString():&lt;/div&gt;" vertex="1">
+          <mxGeometry height="132" width="230" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="81CSCCUonNOGSTzlCpgK-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="MySavings.java" vertex="1">
+          <mxGeometry height="250" width="290" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="81CSCCUonNOGSTzlCpgK-6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="myBank" vertex="1">
+          <mxGeometry height="150" width="70" x="430" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="81CSCCUonNOGSTzlCpgK-14" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="510" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="81CSCCUonNOGSTzlCpgK-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="moneyTotal = 0" vertex="1">
+          <mxGeometry height="30" width="100" x="520" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="81CSCCUonNOGSTzlCpgK-17" edge="1" parent="1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="270" y="170" as="sourcePoint" />
+            <mxPoint x="420" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

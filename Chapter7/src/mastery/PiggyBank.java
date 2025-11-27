@@ -1,38 +1,95 @@
 package mastery;
 
+import java.util.Scanner;
+
 public class PiggyBank 
 {
-	//Money variables
-	private double pennies;
-	private double nickels;
-	private double dimes;
-	private double quarters;
+	//Total money variable
+	private double moneyTotal;
+	
+	//Money variables (value of each coin)
+	private static final double penniesWorth = 0.01;
+	private static final double nickelsWorth = 0.05;
+	private static final double dimesWorth = 0.1;
+	private static final double quartersWorth = 0.25;
 	
 	//Constructor method
 	public PiggyBank()
 	{
-		pennies = 0;
-		nickels = 0;
-		dimes = 0;
-		quarters = 0;
+		moneyTotal = 0;
+	}
+
+	//Get money
+	public double getMoney()
+	{
+		return Math.round(moneyTotal * 100) / 100.0;
 	}
 	
-	public double getPennies()
+	//Setter method
+	public void setMoney(double m)
 	{
-		return pennies;
+		moneyTotal = m;
 	}
 	
-	public double getNickels()
+	//Add money to bank
+	public double addMoney(int choice)
 	{
-		return nickels;
+		switch (choice)
+		{
+			case 2:
+				moneyTotal += penniesWorth;
+				break;
+				
+			case 3:
+				moneyTotal += nickelsWorth;
+				break;
+				
+			case 4:
+				moneyTotal += dimesWorth;
+				break;
+				
+			case 5:
+				moneyTotal += quartersWorth;
+				break;
+		}
+
+		return moneyTotal;
 	}
 	
-	public double getDimes()
+	//Remove money from bank
+	public double takeMoney(int monTa)
 	{
-		return dimes;
+		switch (monTa)
+		{
+			case 1: 
+				moneyTotal -= penniesWorth;
+				break;
+				
+			case 2:
+				moneyTotal -= nickelsWorth;
+				break;
+				
+			case 3:
+				moneyTotal -= dimesWorth;
+				break;
+				
+			case 4:
+				moneyTotal -= quartersWorth;
+				break;
+		}
+			
+		return moneyTotal;
 	}
-	public double getQuarters()
+	
+	public double showTotal()
 	{
-		return quarters;
+		return moneyTotal;
 	}
+	
+	//to string method to print total
+	public String toString() 
+	{
+	    return "You have $" + getMoney();
+	}
+
 }
