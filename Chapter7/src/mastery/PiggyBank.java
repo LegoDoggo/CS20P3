@@ -19,13 +19,13 @@ public class PiggyBank
 		moneyTotal = 0;
 	}
 
-	//Get money
+	//Accessor method
 	public double getMoney()
 	{
 		return Math.round(moneyTotal * 100) / 100.0;
 	}
 	
-	//Setter method
+	//Modifier method
 	public void setMoney(double m)
 	{
 		moneyTotal = m;
@@ -81,6 +81,7 @@ public class PiggyBank
 		return moneyTotal;
 	}
 	
+	//Return the total
 	public double showTotal()
 	{
 		return moneyTotal;

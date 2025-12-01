@@ -41,6 +41,7 @@ public class MySavings {
 			System.out.print("Enter your choice: ");
 			int choice = input.nextInt();
 			
+			//Decision cases
 			switch (choice)
 			{
 				case 0:
