@@ -6,10 +6,11 @@ public class Food
 	private double orderPrice;
 	
 	//Food info variables
-	public double price;
-	public double fat;
-	public double carbs;
-	public double fiber;
+	private double price;
+	private double fat;
+	private double carbs;
+	private double fiber;
+	private String name;
 	
 	//Constructor method (for order price)
 	public Food()
@@ -18,12 +19,13 @@ public class Food
 	}
 	
 	//Overloaded constructor (for food info)
-	public Food(double pr, double fa, double ca, double fi)
+	public Food(double pr, double fa, double ca, double fi, String na)
 	{
 		price = pr;
 		fat = fa;
 		carbs = ca;
 		fiber = fi; 
+		name = na;
 	}
 	
 	//Accessor methods
@@ -56,6 +58,12 @@ public class Food
 	public double getFiber()
 	{
 		return fiber;
+	}
+	
+	//Name
+	public String getName()
+	{
+		return name;
 	}
 	
 	
@@ -91,6 +99,42 @@ public class Food
 		fiber = fi;
 	}
 	
+	//Name
+	public void setName(String na)
+	{
+		name = na;
+	}
 	
+	
+	//toString to print each object
+	public String toString()
+	{
+		//French fries are printed differently so if statement is needed
+		
+		//Print for fries
+		if (name.equals("french fries"))
+		{
+			return "French fries have " + fat + "g fat, " + carbs + "g carbs, and " + fiber + "g fiber.";
+		}
+		
+		//Print for other food objects
+		else
+		{
+			return "Each " + name + " has " + fat + "g fat, " + carbs + "g carbs, and " + fiber + "g fiber.";
+		}
+	}
+	
+	
+	//Method to calculate and return order total
+	public void calculatePrice(int numBurg, int numSal, int numFry, int numSoda, Food burger, Food salad, Food fries, Food soda)
+	{
+		double burgPrice = numBurg * burger.getFPrice();
+		double salPrice = numSal * salad.getFPrice();
+		double fryPrice = numFry * fries.getFPrice();
+		double sodaPrice = numSoda * soda.getFPrice();
+		
+		orderPrice = burgPrice + salPrice + fryPrice + sodaPrice;
+	}
+
 }
 
