@@ -125,7 +125,7 @@ public class Food
 	}
 	
 	
-	//Method to calculate and return order total
+	//Method to calculate order total
 	public void calculatePrice(int numBurg, int numSal, int numFry, int numSoda, Food burger, Food salad, Food fries, Food soda)
 	{
 		double burgPrice = numBurg * burger.getFPrice();

@@ -2,14 +2,13 @@ package mastery;
 
 /*
 
-Program: ????.java          Last Date of this Revision: September 30, 2019
+Program: LunchOrder.java          Last Date of this Revision: December 4th, 2025
 
-Purpose: An application that uses nested for loops to output a table that diplays number in 
- multiples of ten.
+Purpose: An application that allows the user to customize their lunch order and displays the nutritional info and price of the order.
 
-Author: Your Name, 
+Author: Easton Seeley 
 School: CHHS
-Course: Computer Programming ??
+Course: Computer Science 20
  
 
 */
@@ -60,6 +59,15 @@ public class LunchOrder {
 
 /* Screen Dump
 
-Paste the output of your code here
+Enter number of hamburgers: 2
+Each hamburger has 9.0g fat, 33.0g carbs, and 1.0g fiber.
+Enter number of salads: 3
+Each salad has 1.0g fat, 11.0g carbs, and 5.0g fiber.
+Enter number of fries: 1
+French fries have 11.0g fat, 36.0g carbs, and 4.0g fiber.
+Enter number of sodas: 2
+Each soda has 0.0g fat, 38.0g carbs, and 0.0g fiber.
+Your order comes to $12.9
+
  
  */
