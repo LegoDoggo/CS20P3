@@ -16,7 +16,10 @@ public class Reverse {
 		//Display array
 		System.out.println("Countdown");
 		
-		for (int i = 0; i < reverseRay.length; i++)
+		for (int i = reverseRay.length - 1; i >= 0; i--)
+		{
+			System.out.println(reverseRay[i]);
+		}
 	}
 
 }
