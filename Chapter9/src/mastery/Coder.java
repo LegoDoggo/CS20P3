@@ -1,4 +1,18 @@
 package mastery;
+
+/*
+
+Program: Coder.java          Last Date of this Revision: December 11th, 2025
+
+Purpose: An application that uses arrays to encrypt a user's message using a ceaser cipher.
+
+Author: Your Name, 
+School: CHHS
+Course: Computer Programming ??
+ 
+
+*/
+
 import java.util.Scanner;
 
 public class Coder {
@@ -73,3 +87,12 @@ public class Coder {
 	}
 
 }
+
+/* Screen Dump
+
+Coder
+
+Enter a string: This might be, could be, a cipher.
+Encoded message: Vjku okijv dg, eqwnf dg, c ekrjgt.
+ 
+ */
