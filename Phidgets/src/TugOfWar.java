@@ -5,7 +5,7 @@ public class TugOfWar
 {
 
 	public static void main(String[] args) throws Exception {
-	{
+	
 		//Variables for each player's button presses
 		int player1Press = 0;
 		int player2Press = 0;
@@ -93,5 +93,5 @@ public class TugOfWar
         	}
         }
 	}
-	}
+	
 }

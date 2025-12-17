@@ -7,3 +7,7 @@
 /UseBtn_LED.class
 /TugOfWar.class
 /ReadTemperature.class
+/ReadTemp_Humid.class
+/HotOrCold.class
+/Thermostst.class
+/Thermostat.class
