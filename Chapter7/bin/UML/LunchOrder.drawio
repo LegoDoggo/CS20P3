@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.1">
+  <diagram name="Page-1" id="bi9iBxeMeJq79SnM8Bg5">
+    <mxGraphModel dx="1678" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OOpadYsSsasivJoUaJ51-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Food.java" vertex="1">
+          <mxGeometry height="370" width="700" x="64" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-2" parent="OOpadYsSsasivJoUaJ51-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ orderPrice: double&lt;div&gt;+ price: double&lt;/div&gt;&lt;div&gt;+ fat: double&lt;/div&gt;&lt;div&gt;+ carbs: double&lt;/div&gt;&lt;div&gt;+ fiber: double&lt;/div&gt;&lt;div&gt;+ name: string&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="700" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-3" parent="OOpadYsSsasivJoUaJ51-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-4" parent="OOpadYsSsasivJoUaJ51-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Food():&lt;div&gt;+ Food(double pr, double fa, double ca, double fi, String na):&lt;/div&gt;&lt;div&gt;+ public double getOPrice():&lt;/div&gt;&lt;div&gt;+ public double getFPrice():&lt;/div&gt;&lt;div&gt;+ public double getFat():&lt;br&gt;+ public double getCarbs():&lt;/div&gt;&lt;div&gt;+ public double getFiber():&lt;/div&gt;&lt;div&gt;+ public String getName():&lt;/div&gt;&lt;div&gt;+ public void setOPrice():&lt;/div&gt;&lt;div&gt;+ public void setFPrice():&lt;/div&gt;&lt;div&gt;+ public void setFat():&lt;/div&gt;&lt;div&gt;+ public void setCarbs():&lt;/div&gt;&lt;div&gt;+ public void setFiber():&lt;br&gt;+ public void setName():&lt;/div&gt;&lt;div&gt;+ public String toString():&lt;/div&gt;&lt;div&gt;+ public void calculatePrice(&lt;font face=&quot;Helvetica&quot; style=&quot;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;font style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre; text-decoration-color: rgb(0, 102, 204);&quot;&gt;numBurg&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;numSal&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;numFry&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;numSoda&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;Food&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;burger&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;Food&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;salad&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;Food&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;fries&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;Food&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(121, 171, 255), rgb(255, 255, 255)); white-space: pre;&quot;&gt;soda&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;):&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="242" width="700" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="LunchOrder.java" vertex="1">
+          <mxGeometry height="400" width="670" x="79" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-9" edge="1" parent="1" source="OOpadYsSsasivJoUaJ51-4" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OOpadYsSsasivJoUaJ51-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="390" y="540" as="sourcePoint" />
+            <mxPoint x="550" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-10" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="orderPrice" vertex="1">
+          <mxGeometry height="91" width="53" x="117" y="659" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-14" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="170" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="orderPrice = 0" vertex="1">
+          <mxGeometry height="30" width="80" x="190" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-18" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="burger" vertex="1">
+          <mxGeometry height="91" width="53" x="117" y="849" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-20" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="170" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1.85" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="9.0" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="33.0" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1.0" vertex="1">
+          <mxGeometry height="31" width="60" x="170" y="899" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="hamburger" vertex="1">
+          <mxGeometry height="31" width="60" x="190" y="919" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-26" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="salad" vertex="1">
+          <mxGeometry height="91" width="53" x="300" y="659" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-27" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="353" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2.00" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1.0" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="11.0" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="5.0" vertex="1">
+          <mxGeometry height="31" width="60" x="353" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="salad" vertex="1">
+          <mxGeometry height="31" width="60" x="353" y="729" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-40" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="fries" vertex="1">
+          <mxGeometry height="91" width="53" x="300" y="849" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-41" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="353" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1.30" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="11.0" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="36.0" vertex="1">
+          <mxGeometry height="30" width="60" x="353" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="4.0" vertex="1">
+          <mxGeometry height="31" width="60" x="353" y="899" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="french fries" vertex="1">
+          <mxGeometry height="31" width="67" x="363" y="919" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-61" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="soda" vertex="1">
+          <mxGeometry height="91" width="53" x="500" y="659" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-62" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="120" width="20" x="553" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0.95" vertex="1">
+          <mxGeometry height="30" width="60" x="553" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0.0" vertex="1">
+          <mxGeometry height="30" width="60" x="553" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="38.0" vertex="1">
+          <mxGeometry height="30" width="60" x="553" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-66" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0.0" vertex="1">
+          <mxGeometry height="31" width="60" x="553" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="OOpadYsSsasivJoUaJ51-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="soda" vertex="1">
+          <mxGeometry height="31" width="60" x="553" y="729" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
