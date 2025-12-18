@@ -38,9 +38,21 @@ public class Thermostat
         //Create timer variable
         int timer = 0;
         
+ 		//Variables for current state of button
+        boolean currentRed = false;
+        boolean currentGreen = false;
+
+        //Variables for previous state of button
+        boolean prevStateRed = false;
+        boolean prevStateGreen = false;
+        
         //Loop for thermostat function
         while (true)
         {
+        	//Set current button state
+            currentRed = redButton.getState();
+            currentGreen = greenButton.getState();
+            
         	//Determine what LED to light up depending on set temperature
         	if (temperatureSensor.getTemperature() < (setTemp - 2) || temperatureSensor.getTemperature() > (setTemp + 2))
         	{
@@ -55,24 +67,28 @@ public class Thermostat
         	}
         	
         	//Increase and decrease set temperature
-        	if (redButton.getState() == true)
+        	if (currentRed && !prevStateRed)
         	{
         		setTemp--;
         	}
         	
-        	if (greenButton.getState() == true)
+        	if (currentGreen && !prevStateGreen)
         	{
         		setTemp++;
         	}
         	
+            prevStateRed = currentRed;
+            prevStateGreen = currentGreen;
+            
         	//Print current and set temperature every 10 seconds
-        	if (timer == 10)
+        	if (timer == 100)
         	{
         		System.out.println("Temperature: " + temperatureSensor.getTemperature() + " °C");
         		System.out.println("Set Temperature: " + setTemp);
+        		timer = 0;
         	}
         	
-        	Thread.sleep(1000);
+        	Thread.sleep(98);
         	timer++;
         }
 
