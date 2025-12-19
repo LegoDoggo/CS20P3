@@ -31,9 +31,24 @@ public class ButtonEvents {
             }
         });
         
+        greenButton.addStateChangeListener(new DigitalInputStateChangeListener() {
+            public void onStateChange(DigitalInputStateChangeEvent e) {
+                if (e.getState())
+                {
+                	System.out.println("Pressed");
+                }
+                
+                else
+                {
+                	System.out.println("Not pressed");
+                }
+            }
+        });
+        
 
         //Open
         redButton.open(1000);
+        greenButton.open(1000);
 
         //Keep program running
         while (true) {
