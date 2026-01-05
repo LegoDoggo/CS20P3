@@ -2,7 +2,7 @@
 //Add Phidgets Library
 import com.phidget22.*;
 
-public class Btn_LedEvents {
+public class Btn_LedEvents_TOW {
     //Turn on/off LEDs with Global Variables
     static boolean turnRedLEDOn = false;
     static boolean turnGreenLEDOn = false;
@@ -12,6 +12,8 @@ public class Btn_LedEvents {
 
     	//Variables
     	int timesBtnPressed = 0;
+    	int player1Press = 0;
+    	int player2Press = 0;
     	boolean currentGreenState = false;
     	boolean currentRedState = false;
     	boolean previousRedState = false;
@@ -37,7 +39,7 @@ public class Btn_LedEvents {
         redButton.addStateChangeListener(new DigitalInputStateChangeListener() {
             public void onStateChange(DigitalInputStateChangeEvent e) {
                 //Record button state to turn on/off the red LED
-                turnGreenLEDOn = e.getState();
+            	turnRedLEDOn = e.getState();
             }
         });
 
@@ -45,7 +47,7 @@ public class Btn_LedEvents {
         greenButton.addStateChangeListener(new DigitalInputStateChangeListener() {
             public void onStateChange(DigitalInputStateChangeEvent e) {
                 //Record button state to turn on/off the green LED
-                turnRedLEDOn = e.getState();
+                turnGreenLEDOn = e.getState();
             }
         });
 
@@ -56,26 +58,20 @@ public class Btn_LedEvents {
         greenButton.open(1000);
 
         //Use your Phidgets | In the button events you recorded the Button State. Here we will use that data to turn on/off the LEDs
-        while(true) {
-            //turn red LED on based on red button input
-            greenLED.setState(turnGreenLEDOn);
+        while(player1Press < 10 && player2Press < 10) {
+            //Set current states
             currentGreenState = turnGreenLEDOn;
-            
-            //turn green LED on based on green button input
-            redLED.setState(turnRedLEDOn);
             currentRedState = turnRedLEDOn;
             
-            //Increment button presses and print press number
+            //Count player presses
             if (currentGreenState && !previousGreenState)
             {
-            	timesBtnPressed++;
-            	System.out.println("Amount of button presses: " + timesBtnPressed);
+            	player2Press++;
             }
             
             if (currentRedState && !previousRedState)
             {
-            	timesBtnPressed++;
-            	System.out.println("Amount of button presses: " + timesBtnPressed);
+            	player1Press++;
             }
             
             previousGreenState = currentGreenState;
@@ -83,6 +79,25 @@ public class Btn_LedEvents {
         
             //sleep for 150 milliseconds 
             Thread.sleep(50);
+        }
+        
+        //Flash LEDs when game ends
+        redLED.setState(true);
+        greenLED.setState(true);
+        Thread.sleep(1500);
+        redLED.setState(false);
+        greenLED.setState(false);
+        Thread.sleep(500);
+        
+        //Print winner
+        if (player1Press == 10)
+        {
+        	System.out.println("Player 1 wins!");
+        }
+        
+        else if (player2Press == 10)
+        {
+        	System.out.println("Player 2 wins!");
         }
     }
 }
