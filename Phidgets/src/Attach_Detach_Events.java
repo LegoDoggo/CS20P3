@@ -15,10 +15,6 @@ public class Attach_Detach_Events {
         greenButton.setIsHubPortDevice(true);
         greenLED.setHubPort(4);
         greenLED.setIsHubPortDevice(true);
-        
-        //Open
-        greenLED.open(1000);
-        greenButton.open(1000);
 
         //Data Event | Event code runs when data from sensor changes. 
         temperatureSensor.addTemperatureChangeListener(new TemperatureSensorTemperatureChangeListener() {
@@ -34,6 +30,20 @@ public class Attach_Detach_Events {
                 System.out.println("Attach!");
             }
         });
+        
+        //Attach Event | Attach Events run when a Phidget is connected to the Object
+        greenLED.addAttachListener(new AttachListener() {
+            public void onAttach(AttachEvent e) {
+                System.out.println("Attach Green LED");
+            }
+        });
+        
+        //Attach Event | Attach Events run when a Phidget is connected to the Object
+        greenButton.addAttachListener(new AttachListener() {
+            public void onAttach(AttachEvent e) {
+                System.out.println("Attach Green Button");
+            }
+        });
 
         //Detach Event | Detach Events run when a Phidget is disconnected from the Object
         temperatureSensor.addDetachListener(new DetachListener() {
@@ -41,9 +51,25 @@ public class Attach_Detach_Events {
                 System.out.println("Detach!");
             }
         });
+        
+        //Detach Event | Detach Events run when a Phidget is disconnected from the Object
+        greenLED.addDetachListener(new DetachListener() {
+            public void onDetach(DetachEvent e) {
+                System.out.println("Detach Green LED");
+            }
+        });
+        
+        //Detach Event | Detach Events run when a Phidget is disconnected from the Object
+        greenButton.addDetachListener(new DetachListener() {
+            public void onDetach(DetachEvent e) {
+                System.out.println("Detach Green Button");
+            }
+        });
 
         //Open
         temperatureSensor.open(1000);
+        greenLED.open(1000);
+        greenButton.open(1000);
 
         //Keep program running
         while (true) {
